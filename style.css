@@ -1,0 +1,73 @@
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d4;
+}
+
+/* Utility specific for the classic feel */
+.classic-border {
+  border: 1px solid #e5e5e5;
+}
+
+/* Fade In Animation classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Drawer Animation */
+#member-drawer {
+  transition: visibility 0.5s;
+}
+#drawer-overlay {
+  transition: opacity 0.5s;
+}
+#drawer-content {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.drawer-open #member-drawer {
+  visibility: visible;
+}
+.drawer-open #drawer-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.drawer-open #drawer-content {
+  transform: translateX(0);
+}
+
+.drawer-closed #member-drawer {
+  visibility: hidden;
+  transition-delay: 0.5s;
+}
+.drawer-closed #drawer-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+.drawer-closed #drawer-content {
+  transform: translateX(100%);
+}
+/* Transition Dasar */
+#member-drawer {
+  transition: visibility 0.5s;
+}
+#drawer-overlay {
+  transition: opacity 0.5s;
+}
+#drawer-content {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

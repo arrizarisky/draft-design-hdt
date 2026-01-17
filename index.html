@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tamora Hunting Day - Community</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "#ffffff",
+              foreground: "#0a0a0a",
+              muted: "#f5f5f5",
+              "muted-foreground": "#737373",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background text-foreground antialiased selection:bg-black selection:text-white"
+  >
+    <nav
+      class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="font-serif font-bold text-xl tracking-tight">THD.</div>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-medium text-neutral-600"
+        >
+          <a href="#manifesto" class="hover:text-black transition-colors"
+            >Manifesto</a
+          >
+          <a href="#journal" class="hover:text-black transition-colors"
+            >Journal</a
+          >
+          <a href="#people" class="hover:text-black transition-colors"
+            >People</a
+          >
+        </div>
+        <a
+          href="#join"
+          class="text-sm font-medium bg-black text-white px-4 py-2 rounded-sm hover:bg-neutral-800 transition-colors"
+        >
+          Gabung
+        </a>
+      </div>
+    </nav>
+
+    <header
+      id="manifesto"
+      class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-20 relative overflow-hidden"
+    >
+      <div class="max-w-4xl text-center space-y-8 z-10">
+        <span
+          class="inline-block px-3 py-1 rounded-full bg-neutral-100 text-neutral-500 text-xs font-medium tracking-widest uppercase mb-4 reveal-on-scroll"
+          >Tamora Hunting Day</span
+        >
+
+        <h1
+          class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-neutral-900 reveal-on-scroll"
+          style="transition-delay: 100ms"
+        >
+          Kami tidak berburu <br />
+          <span class="italic text-neutral-400">momen besar.</span>
+        </h1>
+
+        <h1
+          class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-neutral-900 reveal-on-scroll"
+          style="transition-delay: 200ms"
+        >
+          Kami berburu yang <br />
+          <span class="border-b-4 border-black pb-2">luput dilihat.</span>
+        </h1>
+
+        <p
+          class="max-w-xl mx-auto text-lg text-neutral-600 mt-8 font-light leading-relaxed reveal-on-scroll"
+          style="transition-delay: 300ms"
+        >
+          Wadah fleksibel bagi fotografer, videografer, dan desainer grafis
+          untuk merekam realitas sekitar. Bukan tentang pixel sempurna, tapi
+          tentang rasa yang tersisa.
+        </p>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-neutral-400"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+        </svg>
+      </div>
+    </header>
+
+    <section
+      id="journal"
+      class="py-24 border-t border-neutral-200 bg-neutral-50/50"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal-on-scroll"
+        >
+          <div>
+            <h2 class="font-serif text-4xl text-neutral-900 mb-2">
+              Hunting Log
+            </h2>
+            <p class="text-neutral-500">
+              Arsip kolektif pergerakan visual THD.
+            </p>
+          </div>
+
+          <div
+            class="flex p-1 bg-white border border-neutral-200 rounded-lg shadow-sm"
+          >
+            <button
+              onclick="filterMedium('all')"
+              class="filter-btn active px-4 py-2 text-sm font-medium rounded-md transition-all bg-neutral-100 text-black"
+            >
+              All
+            </button>
+            <button
+              onclick="filterMedium('photo')"
+              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+            >
+              Photography
+            </button>
+            <button
+              onclick="filterMedium('video')"
+              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+            >
+              Video
+            </button>
+            <button
+              onclick="filterMedium('design')"
+              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+            >
+              Design
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="hunting-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <article
+            class="group cursor-pointer reveal-on-scroll medium-item photo"
+            data-medium="photo"
+          >
+            <div
+              class="relative overflow-hidden aspect-[4/5] bg-neutral-200 mb-4 rounded-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542259682-16b7da5456f5?q=80&w=1000&auto=format&fit=crop"
+                alt="Street"
+                class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
+              >
+                Photo
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+              >
+                <span>Pasar Rame, Medan</span>
+                <span>12 Jan 2024</span>
+              </div>
+              <h3
+                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+              >
+                Hiruk Pikuk Pagi
+              </h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">
+                Ada ritme yang tak terlihat di antara pedagang sayur dan pembeli
+                yang menawar harga.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group cursor-pointer reveal-on-scroll medium-item video"
+            data-medium="video"
+          >
+            <div
+              class="relative overflow-hidden aspect-video bg-neutral-900 mb-4 rounded-sm flex items-center justify-center"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop"
+                alt="Video Thumb"
+                class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity"
+              />
+              <div
+                class="absolute w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+              >
+                <svg
+                  class="w-4 h-4 text-white fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <div
+                class="absolute top-4 left-4 bg-black/90 text-white backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
+              >
+                Video
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+              >
+                <span>Street Archive</span>
+                <span>10 Jan 2024</span>
+              </div>
+              <h3
+                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+              >
+                Silent Noise
+              </h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">
+                Eksperimen visual merekam suara kota tanpa audio, hanya lewat
+                gerak.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group cursor-pointer reveal-on-scroll medium-item design"
+            data-medium="design"
+          >
+            <div
+              class="relative overflow-hidden aspect-square bg-neutral-100 mb-4 rounded-sm p-8 flex items-center justify-center border border-neutral-200"
+            >
+              <div
+                class="w-full h-full border-2 border-black flex items-center justify-center rotate-3 group-hover:rotate-0 transition-transform duration-500"
+              >
+                <span class="font-serif text-4xl font-bold italic">RAW.</span>
+              </div>
+              <div
+                class="absolute top-4 left-4 bg-neutral-900 text-white px-2 py-1 text-xs font-bold uppercase tracking-wider"
+              >
+                Design
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+              >
+                <span>Poster Study</span>
+                <span>08 Jan 2024</span>
+              </div>
+              <h3
+                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+              >
+                Brutalist Local
+              </h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">
+                Menerjemahkan tekstur tembok jalanan menjadi layout poster
+                tipografi.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="group cursor-pointer reveal-on-scroll medium-item photo"
+            data-medium="photo"
+          >
+            <div
+              class="relative overflow-hidden aspect-[3/4] bg-neutral-200 mb-4 rounded-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop"
+                alt="Portrait"
+                class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
+              >
+                Photo
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div
+                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+              >
+                <span>Human Interest</span>
+                <span>05 Jan 2024</span>
+              </div>
+              <h3
+                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+              >
+                Tangan Pekerja
+              </h3>
+              <p class="text-neutral-600 text-sm line-clamp-2">
+                Detail guratan tangan Pak Budi, penjahit sepatu keliling.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-16 text-center">
+          <button
+            class="px-8 py-3 border border-neutral-300 text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300"
+          >
+            Load More Stories
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="people" class="py-24 bg-white text-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="font-serif text-4xl mb-12 border-b border-neutral-200 pb-6 reveal-on-scroll"
+        >
+          People of THD
+        </h2>
+
+        <div
+          id="people-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+        >
+          <!-- <div class="reveal-on-scroll group">
+            <div
+              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop"
+                class="w-full aspect-[3/4] object-cover bg-neutral-100"
+                alt="Member"
+              />
+            </div>
+            <h4 class="font-serif text-lg font-medium">Sarah 'Lens'</h4>
+            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
+              Photographer
+            </p>
+            <p class="text-sm text-neutral-600 italic">
+              "Saya suka memotret bayangan daripada objeknya."
+            </p>
+          </div>
+
+          <div class="reveal-on-scroll group" style="transition-delay: 100ms">
+            <div
+              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop"
+                class="w-full aspect-[3/4] object-cover bg-neutral-100"
+                alt="Member"
+              />
+            </div>
+            <h4 class="font-serif text-lg font-medium">Dimas Visual</h4>
+            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
+              Videographer
+            </p>
+            <p class="text-sm text-neutral-600 italic">
+              "Gerakan lambat membuat segalanya lebih jujur."
+            </p>
+          </div>
+
+          <div class="reveal-on-scroll group" style="transition-delay: 200ms">
+            <div
+              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500&auto=format&fit=crop"
+                class="w-full aspect-[3/4] object-cover bg-neutral-100"
+                alt="Member"
+              />
+            </div>
+            <h4 class="font-serif text-lg font-medium">Raka Art</h4>
+            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
+              Graphic Designer
+            </p>
+            <p class="text-sm text-neutral-600 italic">
+              "Chaos is just structure waiting to be found."
+            </p>
+          </div>
+
+          <div
+            class="reveal-on-scroll border border-dashed border-neutral-300 flex flex-col items-center justify-center p-8 text-center bg-neutral-50 hover:bg-neutral-100 transition-colors cursor-pointer"
+            onclick="document.getElementById('join').scrollIntoView()"
+          >
+            <div
+              class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-4"
+            >
+              <span class="text-2xl">+</span>
+            </div>
+            <h4 class="font-serif text-lg font-medium">Kamu?</h4>
+            <p class="text-sm text-neutral-500 mt-2">
+              Ruang ini masih kosong untuk karyamu.
+            </p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <div id="member-drawer" class="fixed inset-0 z-50 flex justify-end">
+      <div
+        id="drawer-overlay"
+        onclick="closeDrawer()"
+        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0"
+      ></div>
+
+      <div
+        id="drawer-content"
+        class="relative w-full md:w-[600px] h-full bg-white shadow-2xl overflow-y-auto translate-x-full"
+      >
+        <button
+          onclick="closeDrawer()"
+          class="absolute top-6 right-6 z-10 p-2 bg-white/80 rounded-full hover:bg-neutral-100 transition-colors"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div id="drawer-body" class="p-8 md:p-12 min-h-full"></div>
+      </div>
+    </div>
+
+    <section id="join" class="py-24 bg-neutral-900 text-white relative">
+      <div class="max-w-3xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-12">
+          <span
+            class="text-neutral-400 text-xs font-medium tracking-widest uppercase"
+            >Regenerasi</span
+          >
+          <h2 class="font-serif text-4xl md:text-5xl mt-4">
+            Bergabung Tanpa Tekanan
+          </h2>
+          <p class="text-neutral-400 mt-4">
+            Tidak perlu portofolio sempurna. Cukup kejujuran.
+          </p>
+        </div>
+
+        <form
+          class="space-y-8 bg-neutral-800/50 p-8 md:p-12 rounded-lg border border-neutral-700 backdrop-blur-sm reveal-on-scroll"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm text-neutral-400 font-medium"
+                >Nama / Alias</label
+              >
+              <input
+                type="text"
+                placeholder="Panggil kamu apa?"
+                class="w-full bg-transparent border-b border-neutral-600 py-2 focus:outline-none focus:border-white transition-colors text-lg placeholder-neutral-600"
+              />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm text-neutral-400 font-medium"
+                >Medium Utama</label
+              >
+              <select
+                class="w-full bg-transparent border-b border-neutral-600 py-2 focus:outline-none focus:border-white transition-colors text-lg text-white"
+              >
+                <option class="bg-neutral-800">Photography</option>
+                <option class="bg-neutral-800">Videography</option>
+                <option class="bg-neutral-800">Graphic Design</option>
+                <option class="bg-neutral-800">Documentation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4">
+            <label class="text-lg text-white font-serif"
+              >Hal apa yang paling sering kamu perhatikan tapi jarang difoto
+              orang lain?</label
+            >
+            <textarea
+              rows="3"
+              placeholder="Ceritakan sedikit..."
+              class="w-full bg-transparent border border-neutral-600 rounded-sm p-4 focus:outline-none focus:border-white transition-colors text-neutral-200 placeholder-neutral-600 resize-none"
+            ></textarea>
+          </div>
+
+          <div class="pt-4 flex justify-end">
+            <button
+              type="button"
+              class="bg-white text-black px-8 py-3 font-medium text-sm hover:bg-neutral-200 transition-colors rounded-sm"
+            >
+              Kirim Cerita
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-black text-white border-t border-neutral-800 py-12">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+          <h3 class="font-serif text-2xl font-bold">THD.</h3>
+          <p class="text-neutral-500 text-sm mt-1">Medan, Indonesia.</p>
+        </div>
+        <div class="flex space-x-6 text-sm text-neutral-400">
+          <a href="#" class="hover:text-white">Instagram</a>
+          <a href="#" class="hover:text-white">Email</a>
+          <a href="#" class="hover:text-white">Community Guidelines</a>
+        </div>
+        <div class="mt-4 md:mt-0 text-neutral-600 text-xs">
+          &copy; 2024 Tamora Hunting Day.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
