@@ -38,8 +38,7 @@ themeToggleBtn.addEventListener("click", function () {
   updateIcons();
 });
 
-// 1. DATA MEMBER (DATABASE SIMULATION)
-// 1. DATA (Tetap sama, saya hanya merapikan penulisan)
+// DATA MEMBER
 const membersData = [
   {
     id: 1,
@@ -80,13 +79,12 @@ const membersData = [
   },
 ];
 
-// 2. RENDER MEMBERS GRID
+// RENDER MEMBERS GRID
 const peopleGrid = document.getElementById("people-grid");
 
 // Render Member Cards
 membersData.forEach((member, index) => {
   const card = document.createElement("div");
-  // Update class ke desain Sophisticated Dark & Light
   card.className =
     "reveal-on-scroll group cursor-pointer relative flex flex-col items-center text-center";
   card.style.transitionDelay = `${index * 100}ms`;
@@ -123,7 +121,7 @@ membersData.forEach((member, index) => {
   peopleGrid.appendChild(card);
 });
 
-// 3. RENDER JOIN CARD (Sophisticated Placeholder)
+// RENDER JOIN CARD (Sophisticated Placeholder)
 const joinCard = document.createElement("div");
 joinCard.className =
   "reveal-on-scroll group border border-dashed border-neutral-300 dark:border-neutral-800 flex flex-col items-center justify-center p-10 text-center bg-neutral-50/50 dark:bg-neutral-900/20 hover:bg-white dark:hover:bg-[#0a0a0a] hover:border-[#ed4099] transition-all duration-500 cursor-pointer aspect-[3/4]";
@@ -145,7 +143,7 @@ joinCard.innerHTML = `
 `;
 peopleGrid.appendChild(joinCard);
 
-// 3. DRAWER LOGIC
+// DRAWER LOGIC
 function openDrawer(id) {
   const member = membersData.find((m) => m.id === id);
   if (!member) return;
@@ -242,7 +240,7 @@ function closeDrawer() {
   }, 700);
 }
 
-// 4. ANIMATION & INTERACTION LOGIC (Sudah Digabung & Dioptimalkan)
+// ANIMATION & INTERACTION LOGIC
 document.addEventListener("DOMContentLoaded", () => {
   // --- Scroll Reveal Observer ---
   const observerOptions = {
@@ -273,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 100);
 });
 
-// 5. MEDIUM FILTER LOGIC
+// MEDIUM FILTER LOGIC
 function filterMedium(medium) {
   const buttons = document.querySelectorAll(".filter-btn");
 
@@ -334,6 +332,7 @@ initStarBorder("myStarButton", {
   thickness: 2,
 });
 
+// Gooey Navbar
 const navContainer = document.getElementById("nav-main");
 const gooeyFilter = document.getElementById("gooey-filter");
 const gooeyPill = gooeyFilter.querySelector(".gooey-pill");
@@ -395,6 +394,7 @@ function spawnAbsorbParticles(cx, cy) {
   }
 }
 
+// Send Message to Whatshapp
 function sendToWhatsApp() {
   const name = document.getElementById("join-name").value;
   const medium = document.getElementById("join-medium").value;
@@ -406,10 +406,10 @@ function sendToWhatsApp() {
     return;
   }
 
-  const phoneNumber = "6282311649195"; // Format internasional (tanpa + atau 0 di depan)
+  const phoneNumber = "6287801051321"; // Format internasional (tanpa + atau 0 di depan)
 
   // Encode pesan untuk URL
-  const text = `Halo THD!%0A%0ASaya ingin bergabung dengan kolektif.%0A%0A*Nama:* ${name}%0A*Medium:* ${medium}%0A*Perspektif:* ${message}`;
+  const text = `Halo Tamora Hunting Day!%0A%0ASaya ingin jadi Creative.%0A%0A*Nama:* ${name}%0A*Minat:* ${medium}%0A*Short Story:* ${message}`;
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
 

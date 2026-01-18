@@ -1,4 +1,46 @@
-/* Animasi Putar Custom (Star Border) */
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d4;
+}
+/* Mencegah elemen(horizontal scroll bug) */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Memastikan semua container di tengah */
+.max-w-7xl,
+.max-w-5xl,
+.max-w-4xl {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Memperbaiki responsivitas grid hunting log */
+#hunting-grid {
+  display: grid;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Menghilangkan garis dekoratif di mobile agar tidak menggeser layout */
+  [class*="absolute left-1/2 -bottom-"] {
+    display: none;
+  }
+}
+/* Animasi Star in Border */
 @keyframes move-grid {
   0% {
     transform: translateY(0);
@@ -40,7 +82,27 @@
 .animate-star-rotate {
   animation: rotate-glow 4s linear infinite;
 }
-/* Tambahkan ini di bagian CSS */
+
+/* Animasinya tetap sama */
+@keyframes rotate-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efek Glow Tambahan saat Hover */
+.star-border-box:hover {
+  filter: drop-shadow(0 0 5px var(--color-1));
+  transition: 0.3s;
+}
+
+.star-border-box:hover .glow-element {
+  --speed: 1.5s; /* Putaran lebih cepat saat hover */
+}
+
 .profile-pic {
   width: 70px; /* Ukuran foto */
   height: 70px;
@@ -78,42 +140,6 @@
   font-size: 16px;
   font-weight: 500;
   margin-top: 0; /* Pastikan tidak ada margin atas berlebih */
-}
-
-/* ... (CSS connectors dan sub-nodes tetap sama) ... */
-
-/* Animasinya tetap sama */
-@keyframes rotate-glow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Efek Glow Tambahan saat Hover */
-.star-border-box:hover {
-  filter: drop-shadow(0 0 5px var(--color-1));
-  transition: 0.3s;
-}
-
-.star-border-box:hover .glow-element {
-  --speed: 1.5s; /* Putaran lebih cepat saat hover */
-}
-/* Minimalist Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-::-webkit-scrollbar-thumb {
-  background: #e5e5e5;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #d4d4d4;
 }
 
 .filter-active {
@@ -358,32 +384,4 @@
 }
 .dark .nav-item.active-text {
   color: black !important; /* Teks jadi hitam di atas pill putih */
-}
-/* Mencegah elemen keluar jalur (horizontal scroll bug) */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* Memastikan semua container di tengah */
-.max-w-7xl,
-.max-w-5xl,
-.max-w-4xl {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Memperbaiki responsivitas grid hunting log */
-#hunting-grid {
-  display: grid;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  /* Menghilangkan garis dekoratif di mobile agar tidak menggeser layout */
-  [class*="absolute left-1/2 -bottom-"] {
-    display: none;
-  }
 }
