@@ -47,19 +47,32 @@
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
         <div class="font-serif font-bold text-xl tracking-tight">THD.</div>
+
         <div
-          class="hidden md:flex space-x-8 text-sm font-medium text-neutral-600"
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-600 relative p-2"
+          id="nav-main"
         >
-          <a href="#manifesto" class="hover:text-black transition-colors"
+          <a
+            href="#manifesto"
+            class="nav-item relative z-20 px-10 py-1 transition-colors duration-300"
             >Manifesto</a
           >
-          <a href="#journal" class="hover:text-black transition-colors"
+          <a
+            href="#journal"
+            class="nav-item relative z-20 px-10 py-1 transition-colors duration-300"
             >Journal</a
           >
-          <a href="#people" class="hover:text-black transition-colors"
+          <a
+            href="#people"
+            class="nav-item relative z-20 px-10 py-1 transition-colors duration-300"
             >People</a
           >
+
+          <div id="gooey-filter" class="gooey-container">
+            <div class="gooey-pill px-7"></div>
+          </div>
         </div>
+
         <button class="star-border" id="myStarButton">
           <div class="star-glow"></div>
           <div class="star-inner">Gabung</div>
@@ -554,6 +567,20 @@
       </div>
     </footer>
 
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="goo"
+          />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
     <script src="script.js"></script>
   </body>
 </html>

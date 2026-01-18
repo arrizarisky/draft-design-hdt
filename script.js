@@ -236,3 +236,64 @@ initStarBorder("myStarButton", {
   speed: "3s",
   thickness: 2,
 });
+
+const navContainer = document.getElementById("nav-main");
+const gooeyFilter = document.getElementById("gooey-filter");
+const gooeyPill = gooeyFilter.querySelector(".gooey-pill");
+const navItems = document.querySelectorAll(".nav-item");
+
+navItems.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    // 1. Ganti warna teks link asli
+    navItems.forEach((nav) => nav.classList.remove("active-text"));
+    item.classList.add("active-text");
+
+    // 2. Hitung posisi
+    const x = item.offsetLeft;
+    const y = item.offsetTop;
+    const w = item.offsetWidth;
+    const h = item.offsetHeight;
+
+    // 3. Pindahkan Pill Hitam
+    gooeyPill.style.left = `${x}px`;
+    gooeyPill.style.top = `${y}px`;
+    gooeyPill.style.width = `79px`;
+    gooeyPill.style.height = `${h}px`;
+
+    // 4. Reset & Trigger Animasi
+    gooeyFilter.classList.remove("active");
+    void gooeyFilter.offsetWidth;
+    gooeyFilter.classList.add("active");
+
+    // 5. Munculkan partikel yang 'menyerap' ke pusat item
+    spawnAbsorbParticles(x + w / 2, y + h / 2);
+  });
+});
+
+function spawnAbsorbParticles(cx, cy) {
+  const particleCount = 12;
+  for (let i = 0; i < particleCount; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+
+    const size = Math.random() * 15 + 8;
+    const angle = (i / particleCount) * Math.PI * 2;
+    const distance = 60 + Math.random() * 40; // Jarak awal partikel dari luar
+
+    // Posisi awal (relatif terhadap titik pusat item)
+    const startX = Math.cos(angle) * distance;
+    const startY = Math.sin(angle) * distance;
+
+    p.style.width = `${size}px`;
+    p.style.height = `${size}px`;
+    p.style.left = `${cx - size / 2}px`;
+    p.style.top = `${cy - size / 2}px`;
+
+    // Kirim variabel ke CSS
+    p.style.setProperty("--start-x", `${startX}px`);
+    p.style.setProperty("--start-y", `${startY}px`);
+
+    gooeyFilter.appendChild(p);
+    setTimeout(() => p.remove(), 700);
+  }
+}
