@@ -214,3 +214,25 @@ function filterMedium(medium) {
     }
   });
 }
+
+function initStarBorder(elementId, options = {}) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+
+  // Set default jika tidak ada di options
+  const color = options.color || "white";
+  const speed = options.speed || "6s";
+  const thickness = options.thickness || 1;
+
+  // Update CSS Variables
+  el.style.setProperty("--star-color", color);
+  el.style.setProperty("--star-speed", speed);
+  el.style.setProperty("--star-thickness", `${thickness}px`);
+}
+
+// Cara Penggunaan:
+initStarBorder("myStarButton", {
+  color: "#008BFF",
+  speed: "3s",
+  thickness: 2,
+});

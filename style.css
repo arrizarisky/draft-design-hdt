@@ -71,3 +71,71 @@
 #drawer-content {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.star-border {
+  --star-color: #ffffff;
+  --star-speed: 3s;
+  --star-thickness: 2px; /* Tebal border */
+
+  position: relative;
+  display: inline-block;
+  padding: var(--star-thickness); /* Ruang untuk border */
+  overflow: hidden;
+  border-radius: 0; /* Tetap Lancip */
+  border: none;
+  background: #1f2937; /* Warna dasar border saat tidak kena cahaya */
+  cursor: pointer;
+}
+
+/* Ini adalah cahaya yang berputar */
+.star-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 20%,
+    var(--star-color) 25%,
+    transparent 30%,
+    transparent 100%
+  );
+  animation: star-rotate var(--star-speed) linear infinite;
+  z-index: 0;
+}
+
+.star-inner {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, #000, #111827);
+  color: white;
+  text-align: center;
+
+  /* UKURAN BUTTON - Ubah di sini */
+  font-size: 16px;
+  padding: 10px 20px;
+
+  border-radius: 0; /* Tetap Lancip */
+  display: block;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Animasi Putar 360 Derajat */
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efek Hover (Opsional) */
+.star-border:hover .star-glow {
+  filter: brightness(1.5);
+  --star-speed: 1.5s; /* Lebih cepat saat dihover */
+}
