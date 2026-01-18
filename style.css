@@ -359,3 +359,31 @@
 .dark .nav-item.active-text {
   color: black !important; /* Teks jadi hitam di atas pill putih */
 }
+/* Mencegah elemen keluar jalur (horizontal scroll bug) */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Memastikan semua container di tengah */
+.max-w-7xl,
+.max-w-5xl,
+.max-w-4xl {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Memperbaiki responsivitas grid hunting log */
+#hunting-grid {
+  display: grid;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Menghilangkan garis dekoratif di mobile agar tidak menggeser layout */
+  [class*="absolute left-1/2 -bottom-"] {
+    display: none;
+  }
+}
