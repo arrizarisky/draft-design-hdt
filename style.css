@@ -203,6 +203,9 @@
   /* Animasi menyerap ke tengah */
   animation: absorb 0.7s var(--linear-ease) forwards;
 }
+.dark .particle {
+  background: white; /* Partikel jadi putih agar terlihat di background gelap */
+}
 
 @keyframes absorb {
   0% {
@@ -232,4 +235,7 @@
 }
 .nav-item.active-text {
   color: white !important;
+}
+.dark .nav-item.active-text {
+  color: black !important; /* Teks jadi hitam di atas pill putih */
 }

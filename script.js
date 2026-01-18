@@ -1,3 +1,43 @@
+// Cek preferensi sebelumnya atau sistem OS
+if (
+  localStorage.getItem("color-theme") === "dark" ||
+  (!("color-theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+const themeToggleBtn = document.getElementById("theme-toggle");
+const darkIcon = document.getElementById("theme-toggle-dark-icon");
+const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+// Fungsi untuk update icon
+function updateIcons() {
+  if (document.documentElement.classList.contains("dark")) {
+    lightIcon.classList.remove("hidden");
+    darkIcon.classList.add("hidden");
+  } else {
+    lightIcon.classList.add("hidden");
+    darkIcon.classList.remove("hidden");
+  }
+}
+updateIcons();
+
+themeToggleBtn.addEventListener("click", function () {
+  // Toggle class dark di html
+  document.documentElement.classList.toggle("dark");
+
+  // Simpan preferensi di localStorage
+  if (document.documentElement.classList.contains("dark")) {
+    localStorage.setItem("color-theme", "dark");
+  } else {
+    localStorage.setItem("color-theme", "light");
+  }
+  updateIcons();
+});
+
 // 1. DATA MEMBER (DATABASE SIMULATION)
 const membersData = [
   {
