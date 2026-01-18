@@ -47,7 +47,11 @@
       <div
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
-        <div class="font-serif font-bold text-xl tracking-tight">THD.</div>
+        <div class="font-serif font-bold text-xl tracking-tight">
+          <div class="rounded-full bg-black p-1">
+            <img src="assets/icons/logoTHD.png" alt="" class="w-12 h-12" />
+          </div>
+        </div>
 
         <div
           class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-600 relative p-2"
@@ -111,468 +115,902 @@
 
     <header
       id="manifesto"
-      class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 pb-20 relative overflow-hidden"
+      class="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden bg-white dark:bg-[#050505]"
     >
-      <div class="max-w-4xl text-center space-y-8 z-10">
-        <span
-          class="inline-block px-3 py-1 rounded-full bg-[#008BFF]/10 text-neutral-500 dark:text-neutral-200 text-xs font-medium tracking-widest uppercase mb-4 reveal-on-scroll"
-          >Tamora Hunting Day</span
-        >
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-grid-animate opacity-10 dark:opacity-30"
+        ></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(246, 59, 237, 0.1),transparent_70%)]"
+        ></div>
+      </div>
 
-        <h1
-          class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-neutral-900 dark:text-neutral-200 reveal-on-scroll"
-          style="transition-delay: 100ms"
+      <div class="max-w-5xl text-center space-y-10 z-10">
+        <div
+          class="relative inline-block p-[1px] overflow-hidden rounded-full mb-4"
         >
-          Kami tidak berburu <br />
-          <span class="italic text-neutral-400 dark:text-neutral-600"
-            >momen besar.</span
+          <div
+            class="absolute inset-[-100%] w-[300%] h-[300%] bg-[conic-gradient(from_0deg,transparent_0%,#ED4099_10%,transparent_20%,transparent_100%)] animate-[rotate-glow_4s_linear_infinite]"
+          ></div>
+          <div
+            class="relative px-6 py-1.5 rounded-full bg-white dark:bg-black text-neutral-800 dark:text-white text-[10px] font-bold tracking-[0.4em] uppercase border border-neutral-200 dark:border-white/10"
           >
-        </h1>
+            Tamora Hunting Day
+          </div>
+        </div>
 
-        <h1
-          class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] text-neutral-900 dark:text-neutral-200 reveal-on-scroll"
-          style="transition-delay: 200ms"
-        >
-          Kami berburu yang <br />
-          <span class="border-b-4 border-black pb-2">luput dilihat.</span>
-        </h1>
+        <div class="space-y-2">
+          <h1
+            class="font-light text-5xl md:text-8xl tracking-tighter text-gradient-black dark:text-gradient-white leading-[0.95] reveal-on-scroll"
+          >
+            Kami tidak berburu <br />
+            <span
+              class="italic font-extralight text-neutral-400 dark:text-neutral-600"
+              >momen besar.</span
+            >
+          </h1>
+
+          <h1
+            class="font-light text-5xl md:text-8xl tracking-tighter text-neutral-900 dark:text-white leading-[0.95] reveal-on-scroll"
+          >
+            Kami berburu yang <br />
+            <span class="relative inline-block">
+              luput dilihat.
+              <span
+                class="absolute bottom-2 left-0 w-full h-[2px] bg-[#ed4099] shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+              ></span>
+            </span>
+          </h1>
+        </div>
 
         <p
-          class="max-w-xl mx-auto text-lg text-neutral-600 dark:text-neutral-200 mt-8 font-light leading-relaxed reveal-on-scroll"
+          class="max-w-2xl mx-auto text-sm md:text-lg text-neutral-800 dark:text-neutral-400 font-light leading-relaxed tracking-wide reveal-on-scroll"
           style="transition-delay: 300ms"
         >
-          Wadah fleksibel bagi fotografer, videografer, dan desainer grafis
+          Wadah fleksibel bagi
+          <span class="text-neutral 900 dark:text-white"
+            >fotografer, videografer, dan desainer grafis</span
+          >
           untuk merekam realitas sekitar. Bukan tentang pixel sempurna, tapi
           tentang rasa yang tersisa.
         </p>
+
+        <div class="pt-8">
+          <button
+            class="px-8 py-3 bg-neutral-900 dark:bg-white text-white dark:text-black text-xs font-bold tracking-[0.3em] uppercase hover:bg-transparent hover:text-white border border-black dark:border-white transition-all duration-500"
+          >
+            Explore Vision
+          </button>
+        </div>
       </div>
 
       <div
-        class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-neutral-400"
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-neutral-600"
       >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+        <span class="text-[9px] tracking-[0.5em] uppercase rotate-90 mb-8"
+          >Scroll</span
         >
-          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
-        </svg>
+        <div
+          class="w-px h-12 bg-gradient-to-b from-blue-500 to-transparent"
+        ></div>
       </div>
     </header>
 
     <section
-      id="journal"
+      id="structure-organize"
       class="py-24 border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/50"
     >
-      <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal-on-scroll"
-        >
-          <div>
-            <h2
-              class="font-serif text-4xl text-neutral-900 dark:text-neutral-200 mb-2"
+      <div
+        class="min-h-screen bg-neutral-50 dark:bg-[#050505] text-white py-20 px-4 font-sans"
+      >
+        <div class="text-center mb-24">
+          <h2 class="text-xs tracking-[0.6em] text-gray-500 uppercase mb-3">
+            Organizational Structure
+          </h2>
+          <h1
+            class="text-5xl font-bold tracking-tighter italic text-black dark:text-white"
+          >
+            TAMORA HUNTING <span class="text-[#ed4099]">DAY</span>
+          </h1>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+          <div class="relative p-[1px] group mb-16">
+            <div
+              class="absolute inset-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0%,white_15%,transparent_30%,transparent_100%)] animate-star-rotate"
+            ></div>
+            <div
+              class="relative bg-black px-12 py-8 text-center w-72 border border-gray-800"
             >
-              Hunting Log
+              <div
+                class="w-24 h-24 mx-auto mb-4 rounded-none border border-gray-700 p-1 rotate-45 overflow-hidden"
+              >
+                <img
+                  src="https://i.pravatar.cc/150?u=founder"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all -rotate-45 scale-125"
+                />
+              </div>
+              <p
+                class="text-[10px] tracking-[0.4em] text-blue-400 uppercase mb-1 font-bold"
+              >
+                Founder
+              </p>
+              <h3 class="text-xl font-light tracking-widest">DIMAS THD</h3>
+            </div>
+            <div
+              class="absolute left-1/2 -bottom-16 w-px h-16 bg-gradient-to-b from-white to-gray-800 -translate-x-1/2"
+            ></div>
+          </div>
+
+          <div class="relative p-[1px] group mb-20 mt-4">
+            <div
+              class="absolute inset-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0%,#9ca3af_10%,transparent_20%,transparent_100%)] animate-star-rotate opacity-50"
+            ></div>
+            <div
+              class="relative bg-[#0a0a0a] px-10 py-6 text-center w-64 border border-gray-900"
+            >
+              <div
+                class="w-16 h-16 mx-auto mb-3 rounded-full border border-gray-800 p-1"
+              >
+                <img
+                  src="https://i.pravatar.cc/150?u=head"
+                  class="w-full h-full rounded-full object-cover grayscale"
+                />
+              </div>
+              <p class="text-[9px] tracking-widest text-gray-500 uppercase">
+                General Head
+              </p>
+              <h4 class="text-lg font-light">ABDUL RAFLY</h4>
+            </div>
+            <div
+              class="absolute left-1/2 -bottom-20 w-px h-20 bg-gray-800 -translate-x-1/2"
+            ></div>
+          </div>
+
+          <div class="relative pt-20 w-full border-t border-gray-800">
+            <div
+              class="absolute top-0 left-[16.6%] right-[16.6%] h-px bg-gray-800"
+            ></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="flex flex-col items-center relative">
+                <div class="w-px h-20 bg-gray-800 absolute -top-20"></div>
+                <div
+                  class="bg-black border border-gray-800 p-6 w-56 text-center hover:border-blue-500/50 transition-colors"
+                >
+                  <p
+                    class="text-[8px] tracking-[0.3em] text-blue-500 uppercase mb-2"
+                  >
+                    Administration
+                  </p>
+                  <h5 class="text-sm font-medium tracking-wider">
+                    HABIBIE SYAH
+                  </h5>
+                  <div class="mt-4 flex justify-center">
+                    <img
+                      src="https://i.pravatar.cc/100?u=sec"
+                      class="w-10 h-10 rounded-full grayscale"
+                    />
+                  </div>
+                </div>
+                <div class="w-px h-12 bg-gray-900"></div>
+                <div
+                  class="px-4 py-2 border border-gray-900 text-[10px] text-gray-600 tracking-tighter"
+                >
+                  MEMBER UNIT A
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center relative">
+                <div class="w-px h-20 bg-gray-800 absolute -top-20"></div>
+                <div
+                  class="bg-black border border-gray-800 p-6 w-56 text-center hover:border-purple-500/50 transition-colors"
+                >
+                  <p
+                    class="text-[8px] tracking-[0.3em] text-purple-500 uppercase mb-2"
+                  >
+                    Treasury
+                  </p>
+                  <h5 class="text-sm font-medium tracking-wider">MORA</h5>
+                  <div class="mt-4 flex justify-center">
+                    <img
+                      src="https://i.pravatar.cc/100?u=cham"
+                      class="w-10 h-10 rounded-full grayscale"
+                    />
+                  </div>
+                </div>
+                <div class="w-px h-12 bg-gray-900"></div>
+                <div
+                  class="px-4 py-2 border border-gray-900 text-[10px] text-gray-600 tracking-tighter"
+                >
+                  MEMBER UNIT B
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center relative">
+                <div class="w-px h-20 bg-gray-800 absolute -top-20"></div>
+                <div
+                  class="bg-black border border-gray-800 p-6 w-56 text-center hover:border-amber-500/50 transition-colors"
+                >
+                  <p
+                    class="text-[8px] tracking-[0.3em] text-amber-500 uppercase mb-2"
+                  >
+                    Visual & Arts
+                  </p>
+                  <h5 class="text-sm font-medium tracking-wider">
+                    HAIQAL FAIZ
+                  </h5>
+                  <div class="mt-4 flex justify-center">
+                    <img
+                      src="https://i.pravatar.cc/100?u=crea"
+                      class="w-10 h-10 rounded-full grayscale"
+                    />
+                  </div>
+                </div>
+                <div class="w-px h-12 bg-gray-900"></div>
+                <div
+                  class="px-4 py-2 border border-gray-900 text-[10px] text-gray-600 tracking-tighter"
+                >
+                  MEMBER UNIT C
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="bg-[#050505] py-24 px-6 font-['Inter']">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+        >
+          <div class="max-w-2xl">
+            <h2
+              class="text-xs tracking-[0.5em] text-blue-500 uppercase mb-4 font-bold"
+            >
+              Grow Creative
             </h2>
-            <p class="text-neutral-500 dark:text-neutral-300">
-              Arsip kolektif pergerakan visual THD.
+            <h1 class="text-5xl font-light tracking-tighter text-white">
+              Latest <span class="text-gray-600 italic">Events</span>
+            </h1>
+            <p class="text-gray-400 mt-6 text-lg font-light leading-relaxed">
+              Eksplorasi kegiatan terbaru komunitas THD, mulai dari workshop
+              teknis hingga kolaborasi penuh manfaat.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="text-white border-b border-gray-700 pb-1 hover:border-white transition-all tracking-widest text-xs uppercase"
+            >View All Archive</a
+          >
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div
+            class="md:col-span-8 group relative overflow-hidden border border-gray-900 bg-[#0a0a0a] min-h-[450px] flex flex-col justify-end p-10 transition-all hover:border-gray-700"
+          >
+            <div
+              class="absolute inset-0 z-0 scale-105 group-hover:scale-100 transition-transform duration-700"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000"
+                class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"
+              ></div>
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="inline-block px-4 py-1 border border-blue-500/50 text-blue-400 text-[10px] uppercase tracking-[0.3em] mb-6 bg-blue-500/5"
+              >
+                Main Event
+              </div>
+              <h3 class="text-3xl font-medium text-white mb-4 leading-tight">
+                THD Global Summit 2026:<br />Architecting the Future
+              </h3>
+              <p class="text-gray-400 max-w-lg font-light mb-8">
+                Pertemuan tahunan para inovator THD untuk merancang peta jalan
+                teknologi dan ekosistem kreatif satu dekade ke depan.
+              </p>
+              <div
+                class="flex items-center gap-6 text-xs tracking-widest text-gray-500 uppercase"
+              >
+                <span>Jan 24, 2026</span>
+                <span class="w-12 h-px bg-gray-800"></span>
+                <span>Jakarta, ID</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="md:col-span-4 relative p-[1px] group overflow-hidden bg-gray-900/50"
+          >
+            <div
+              class="absolute inset-[-100%] w-[300%] h-[300%] bg-[conic-gradient(from_0deg,transparent_0%,white_10%,transparent_20%,transparent_100%)] animate-[rotate-glow_6s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+
+            <div
+              class="relative bg-[#0a0a0a] h-full p-8 flex flex-col border border-gray-900"
+            >
+              <span
+                class="text-[10px] text-gray-500 tracking-widest uppercase mb-auto"
+                >Workshop</span
+              >
+              <h4 class="text-xl font-light text-white mt-12 mb-4">
+                Cybernetic Design Theory
+              </h4>
+              <p class="text-gray-500 text-sm font-light leading-relaxed mb-8">
+                Eksplorasi hubungan antara mekanika digital dan estetika visual
+                modern.
+              </p>
+              <button
+                class="w-full py-4 border border-gray-800 text-[10px] tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all"
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="md:col-span-4 border border-gray-900 bg-[#0a0a0a] p-8 hover:bg-[#0f0f0f] transition-all"
+          >
+            <div class="flex justify-between items-start mb-12">
+              <div class="text-2xl font-light text-gray-600">03.</div>
+              <div
+                class="w-10 h-10 border border-gray-800 flex items-center justify-center group-hover:border-white transition-all"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-500 group-hover:text-white"
+                >
+                  <path
+                    d="M3.5 11.5L11.5 3.5M11.5 3.5H3.5M11.5 3.5V11.5"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h4
+              class="text-lg font-medium text-white mb-2 uppercase tracking-tight"
+            >
+              Community Meetup
+            </h4>
+            <p class="text-gray-500 text-sm font-light">
+              Sesi diskusi santai antar member Founder dan pilar organisasi.
             </p>
           </div>
 
           <div
-            class="flex p-1 bg-white border border-neutral-200 rounded-lg shadow-sm"
+            class="md:col-span-4 border border-gray-900 bg-[#0a0a0a] p-8 hover:bg-[#0f0f0f] transition-all"
+          >
+            <div class="flex justify-between items-start mb-12">
+              <div class="text-2xl font-light text-gray-600">04.</div>
+              <div
+                class="w-10 h-10 border border-gray-800 flex items-center justify-center group-hover:border-white transition-all"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-500 group-hover:text-white"
+                >
+                  <path
+                    d="M3.5 11.5L11.5 3.5M11.5 3.5H3.5M11.5 3.5V11.5"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h4
+              class="text-lg font-medium text-white mb-2 uppercase tracking-tight"
+            >
+              Creative Jam
+            </h4>
+            <p class="text-gray-500 text-sm font-light">
+              Kolaborasi 24 jam untuk menghasilkan karya visual eksklusif THD.
+            </p>
+          </div>
+
+          <div
+            class="md:col-span-4 border border-gray-900 bg-[#0a0a0a] p-8 hover:bg-[#0f0f0f] transition-all"
+          >
+            <div class="flex justify-between items-start mb-12">
+              <div class="text-2xl font-light text-gray-600">05.</div>
+              <div
+                class="w-10 h-10 border border-gray-800 flex items-center justify-center group-hover:border-white transition-all"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="text-gray-500 group-hover:text-white"
+                >
+                  <path
+                    d="M3.5 11.5L11.5 3.5M11.5 3.5H3.5M11.5 3.5V11.5"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <h4
+              class="text-lg font-medium text-white mb-2 uppercase tracking-tight"
+            >
+              Tech Deep Dive
+            </h4>
+            <p class="text-gray-500 text-sm font-light">
+              Bedah tuntas infrastruktur backend terbaru di ekosistem THD.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="journal"
+      class="py-24 bg-white dark:bg-[#050505] border-t border-neutral-100 dark:border-neutral-900 transition-colors duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+        >
+          <div class="reveal-on-scroll">
+            <h2
+              class="text-xs tracking-[0.5em] text-[#ed4099] uppercase mb-4 font-bold"
+            >
+              Archives
+            </h2>
+            <h1
+              class="text-4xl md:text-5xl font-light tracking-tighter text-neutral-900 dark:text-white leading-none"
+            >
+              Hunting
+              <span class="text-neutral-400 dark:text-neutral-600 italic"
+                >Log</span
+              >
+            </h1>
+            <p
+              class="mt-4 text-neutral-500 dark:text-neutral-400 font-light max-w-sm"
+            >
+              Arsip kolektif pergerakan visual THD. Merekam realitas yang luput
+              dari pandangan umum.
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-8 border-b border-neutral-100 dark:border-neutral-900 pb-2 overflow-x-auto w-full md:w-auto"
           >
             <button
               onclick="filterMedium('all')"
-              class="filter-btn active px-4 py-2 text-sm font-medium rounded-md transition-all bg-neutral-100 text-black"
+              class="filter-btn filter-active text-[10px] tracking-[0.3em] uppercase font-bold text-neutral-900 dark:text-white whitespace-nowrap"
             >
               All
             </button>
             <button
               onclick="filterMedium('photo')"
-              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+              class="filter-btn text-[10px] tracking-[0.3em] uppercase font-medium text-neutral-400 hover:text-[#ed4099] transition-colors whitespace-nowrap"
             >
               Photography
             </button>
             <button
               onclick="filterMedium('video')"
-              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+              class="filter-btn text-[10px] tracking-[0.3em] uppercase font-medium text-neutral-400 hover:text-[#ed4099] transition-colors whitespace-nowrap"
             >
               Video
             </button>
             <button
               onclick="filterMedium('design')"
-              class="filter-btn px-4 py-2 text-sm font-medium text-neutral-500 hover:text-black rounded-md transition-all"
+              class="filter-btn text-[10px] tracking-[0.3em] uppercase font-medium text-neutral-400 hover:text-[#ed4099] transition-colors whitespace-nowrap"
             >
               Design
             </button>
           </div>
         </div>
 
-        <div
-          id="hunting-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div id="hunting-grid" class="grid grid-cols-1 md:grid-cols-12 gap-10">
           <article
-            class="group cursor-pointer reveal-on-scroll medium-item photo"
+            class="md:col-span-4 group cursor-pointer reveal-on-scroll medium-item photo"
             data-medium="photo"
           >
             <div
-              class="relative overflow-hidden aspect-[4/5] bg-neutral-200 mb-4 rounded-sm"
+              class="relative overflow-hidden aspect-[4/5] bg-neutral-100 dark:bg-neutral-900 mb-6"
             >
               <img
-                src="https://images.unsplash.com/photo-1711125570526-327a0410a4a4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1711125570526-327a0410a4a4?q=80&w=1074"
                 alt="Street"
-                class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                class="object-cover w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
               <div
-                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
+                class="absolute top-6 left-6 bg-white dark:bg-black px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-900 dark:text-white border border-neutral-200 dark:border-neutral-800"
               >
                 Photo
               </div>
             </div>
-            <div class="space-y-2">
+            <div class="space-y-3">
               <div
-                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+                class="flex justify-between items-center text-[9px] tracking-widest text-neutral-400 dark:text-neutral-500 uppercase"
               >
                 <span>Pasar Rame, Medan</span>
-                <span>12 Jan 2024</span>
+                <span>12 Jan 2026</span>
               </div>
               <h3
-                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+                class="text-xl font-light text-neutral-900 dark:text-white group-hover:text-[#ed4099] transition-colors"
               >
                 Hiruk Pikuk Pagi
               </h3>
-              <p class="text-neutral-600 text-sm line-clamp-2">
-                Ada ritme yang tak terlihat di antara pedagang sayur dan pembeli
-                yang menawar harga.
+              <p
+                class="text-sm text-neutral-500 dark:text-neutral-400 font-light leading-relaxed line-clamp-2 italic"
+              >
+                "Ada ritme yang tak terlihat di antara pedagang sayur..."
               </p>
             </div>
           </article>
 
           <article
-            class="group cursor-pointer reveal-on-scroll medium-item video"
+            class="md:col-span-8 group cursor-pointer reveal-on-scroll medium-item video"
             data-medium="video"
           >
             <div
-              class="relative overflow-hidden aspect-video bg-neutral-900 mb-4 rounded-sm flex items-center justify-center"
+              class="relative overflow-hidden aspect-video bg-neutral-900 mb-6"
             >
               <img
-                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop"
-                alt="Video Thumb"
-                class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity"
+                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000"
+                alt="Video"
+                class="object-cover w-full h-full opacity-40 group-hover:opacity-70 transition-opacity duration-700"
               />
-              <div
-                class="absolute w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
-              >
-                <svg
-                  class="w-4 h-4 text-white fill-current"
-                  viewBox="0 0 24 24"
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-[#ed4099] group-hover:border-[#ed4099] transition-all duration-500"
                 >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+                  <svg
+                    class="w-5 h-5 text-white fill-current ml-1"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
               </div>
               <div
-                class="absolute top-4 left-4 bg-black/90 text-white backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
+                class="absolute top-6 left-6 bg-black text-white px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] border border-white/20"
               >
                 Video
               </div>
             </div>
-            <div class="space-y-2">
-              <div
-                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
-              >
-                <span>Street Archive</span>
-                <span>10 Jan 2024</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3
+                  class="text-2xl font-light text-neutral-900 dark:text-white group-hover:text-[#ed4099] transition-colors"
+                >
+                  Silent Noise
+                </h3>
+                <p
+                  class="text-[9px] tracking-[0.3em] text-neutral-400 uppercase mt-2"
+                >
+                  Experimental Cinematography
+                </p>
               </div>
-              <h3
-                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+              <p
+                class="text-sm text-neutral-500 dark:text-neutral-400 font-light leading-relaxed self-center"
               >
-                Silent Noise
-              </h3>
-              <p class="text-neutral-600 text-sm line-clamp-2">
                 Eksperimen visual merekam suara kota tanpa audio, hanya lewat
-                gerak.
+                gerak bayangan.
               </p>
             </div>
           </article>
 
           <article
-            class="group cursor-pointer reveal-on-scroll medium-item design"
+            class="md:col-span-5 group cursor-pointer reveal-on-scroll medium-item design"
             data-medium="design"
           >
             <div
-              class="relative overflow-hidden aspect-square bg-neutral-100 mb-4 rounded-sm p-8 flex items-center justify-center border border-neutral-200"
+              class="relative overflow-hidden aspect-square bg-[#f5f5f5] dark:bg-[#0a0a0a] border border-neutral-100 dark:border-neutral-900 mb-6 flex items-center justify-center p-12"
             >
               <div
-                class="w-full h-full border-2 border-black flex items-center justify-center rotate-3 group-hover:rotate-0 transition-transform duration-500"
+                class="relative z-10 transition-transform duration-500 group-hover:scale-110"
               >
                 <img
-                  src="https://cdn.dribbble.com/userupload/24570168/file/original-83a5c56d8c5f7a01e75319de33c29d66.jpg?resize=1504x1128&vertical=center"
-                  alt="Video Thumb"
-                  class="object-cover w-full h-full opacity-60 group-hover:opacity-80 transition-opacity"
+                  src="https://cdn.dribbble.com/userupload/24570168/file/original-83a5c56d8c5f7a01e75319de33c29d66.jpg"
+                  alt="Design"
+                  class="shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
               </div>
               <div
-                class="absolute top-4 left-4 bg-neutral-900 text-white px-2 py-1 text-xs font-bold uppercase tracking-wider"
+                class="absolute top-6 left-6 bg-black text-white px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em]"
               >
                 Design
               </div>
+              <div
+                class="absolute inset-0 border-[1px] border-transparent group-hover:border-[#ed4099]/30 transition-all"
+              ></div>
             </div>
             <div class="space-y-2">
-              <div
-                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+              <span
+                class="text-[9px] text-[#ed4099] font-bold tracking-widest uppercase"
+                >Poster Study</span
               >
-                <span>Poster Study</span>
-                <span>08 Jan 2024</span>
-              </div>
               <h3
-                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
+                class="text-xl font-light text-neutral-900 dark:text-white transition-colors"
               >
                 Brutalist Local
               </h3>
-              <p class="text-neutral-600 text-sm line-clamp-2">
-                Menerjemahkan tekstur tembok jalanan menjadi layout poster
-                tipografi.
+              <p
+                class="text-sm text-neutral-500 dark:text-neutral-400 font-light"
+              >
+                Menerjemahkan tekstur tembok jalanan menjadi layout poster.
               </p>
             </div>
           </article>
 
           <article
-            class="group cursor-pointer reveal-on-scroll medium-item photo"
+            class="md:col-span-7 group cursor-pointer reveal-on-scroll medium-item photo"
             data-medium="photo"
           >
             <div
-              class="relative overflow-hidden aspect-[3/4] bg-neutral-200 mb-4 rounded-sm"
+              class="relative overflow-hidden aspect-[16/9] bg-neutral-100 dark:bg-neutral-900 mb-6"
             >
               <img
-                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000"
                 alt="Portrait"
-                class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+                class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-1000"
               />
               <div
-                class="absolute top-4 left-4 bg-white/90 backdrop-blur px-2 py-1 text-xs font-bold uppercase tracking-wider"
-              >
-                Photo
-              </div>
-            </div>
-            <div class="space-y-2">
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+              ></div>
               <div
-                class="flex justify-between text-xs text-neutral-400 font-medium uppercase tracking-wider"
+                class="absolute bottom-6 left-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform"
               >
-                <span>Human Interest</span>
-                <span>05 Jan 2024</span>
+                <p
+                  class="text-[9px] tracking-widest uppercase font-bold text-[#ed4099]"
+                >
+                  Human Interest
+                </p>
+                <h4 class="text-lg font-light">Tangan Pekerja</h4>
               </div>
-              <h3
-                class="font-serif text-xl group-hover:underline decoration-1 underline-offset-4"
-              >
-                Tangan Pekerja
-              </h3>
-              <p class="text-neutral-600 text-sm line-clamp-2">
-                Detail guratan tangan Pak Budi, penjahit sepatu keliling.
-              </p>
             </div>
           </article>
         </div>
 
-        <div class="mt-16 text-center">
+        <div class="mt-24 text-center">
           <button
-            class="px-8 py-3 border border-neutral-300 text-sm font-medium hover:bg-black hover:text-white transition-colors duration-300"
+            class="relative inline-flex items-center group px-12 py-4 overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-[#ed4099] transition-all"
           >
-            Load More Stories
+            <span
+              class="absolute w-0 h-full bg-[#ed4099] left-0 top-0 group-hover:w-full transition-all duration-500 ease-out z-0"
+            ></span>
+            <span
+              class="relative z-10 text-[10px] tracking-[0.4em] font-bold text-neutral-900 dark:text-white group-hover:text-white uppercase transition-colors"
+              >Load More Stories</span
+            >
           </button>
         </div>
       </div>
     </section>
 
-    <section id="people" class="py-24 bg-white text-black">
-      <div class="max-w-7xl mx-auto px-6">
-        <h2
-          class="font-serif text-4xl mb-12 border-b border-neutral-200 pb-6 reveal-on-scroll"
+    <section
+      id="people"
+      class="relative py-32 bg-white dark:bg-[#050505] text-neutral-900 dark:text-white border-t border-neutral-100 dark:border-neutral-900 transition-colors duration-500 overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20"
+      >
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-neutral-200 dark:via-neutral-800 to-transparent"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div
+          class="flex flex-col items-center text-center mb-24 reveal-on-scroll"
         >
-          People of THD
-        </h2>
+          <span
+            class="inline-block mb-6 px-3 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 backdrop-blur text-[10px] tracking-[0.4em] font-bold uppercase text-[#ed4099]"
+          >
+            The Collective
+          </span>
+
+          <h2
+            class="font-light text-5xl md:text-7xl tracking-tighter leading-none mb-6"
+          >
+            People of
+            <span
+              class="italic font-serif text-neutral-400 dark:text-neutral-600"
+              >THD</span
+            >
+          </h2>
+
+          <p
+            class="max-w-lg text-neutral-500 dark:text-neutral-400 font-light text-sm md:text-base leading-relaxed"
+          >
+            Individu di balik lensa dan layar. Para kurator visual yang
+            membentuk perspektif baru.
+          </p>
+
+          <div
+            class="mt-8 w-px h-16 bg-gradient-to-b from-neutral-300 dark:from-neutral-700 to-transparent"
+          ></div>
+        </div>
 
         <div
           id="people-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
-        >
-          <!-- <div class="reveal-on-scroll group">
-            <div
-              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop"
-                class="w-full aspect-[3/4] object-cover bg-neutral-100"
-                alt="Member"
-              />
-            </div>
-            <h4 class="font-serif text-lg font-medium">Sarah 'Lens'</h4>
-            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
-              Photographer
-            </p>
-            <p class="text-sm text-neutral-600 italic">
-              "Saya suka memotret bayangan daripada objeknya."
-            </p>
-          </div>
-
-          <div class="reveal-on-scroll group" style="transition-delay: 100ms">
-            <div
-              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop"
-                class="w-full aspect-[3/4] object-cover bg-neutral-100"
-                alt="Member"
-              />
-            </div>
-            <h4 class="font-serif text-lg font-medium">Dimas Visual</h4>
-            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
-              Videographer
-            </p>
-            <p class="text-sm text-neutral-600 italic">
-              "Gerakan lambat membuat segalanya lebih jujur."
-            </p>
-          </div>
-
-          <div class="reveal-on-scroll group" style="transition-delay: 200ms">
-            <div
-              class="mb-4 overflow-hidden rounded-sm grayscale group-hover:grayscale-0 transition-all duration-500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500&auto=format&fit=crop"
-                class="w-full aspect-[3/4] object-cover bg-neutral-100"
-                alt="Member"
-              />
-            </div>
-            <h4 class="font-serif text-lg font-medium">Raka Art</h4>
-            <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">
-              Graphic Designer
-            </p>
-            <p class="text-sm text-neutral-600 italic">
-              "Chaos is just structure waiting to be found."
-            </p>
-          </div>
-
-          <div
-            class="reveal-on-scroll border border-dashed border-neutral-300 flex flex-col items-center justify-center p-8 text-center bg-neutral-50 hover:bg-neutral-100 transition-colors cursor-pointer"
-            onclick="document.getElementById('join').scrollIntoView()"
-          >
-            <div
-              class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-4"
-            >
-              <span class="text-2xl">+</span>
-            </div>
-            <h4 class="font-serif text-lg font-medium">Kamu?</h4>
-            <p class="text-sm text-neutral-500 mt-2">
-              Ruang ini masih kosong untuk karyamu.
-            </p>
-          </div> -->
-        </div>
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16"
+        ></div>
       </div>
     </section>
 
-    <div id="member-drawer" class="fixed inset-0 z-50 flex justify-end">
+    <div id="member-drawer" class="fixed inset-0 z-[100] invisible">
       <div
         id="drawer-overlay"
         onclick="closeDrawer()"
-        class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0"
+        class="absolute inset-0 bg-white/60 dark:bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-500 cursor-crosshair"
       ></div>
 
       <div
         id="drawer-content"
-        class="relative w-full md:w-[600px] h-full bg-white shadow-2xl overflow-y-auto translate-x-full"
+        class="absolute right-0 top-0 w-full md:w-[550px] lg:w-[650px] h-full bg-white dark:bg-[#0a0a0a] shadow-[[-20px_0_50px_rgba(0,0,0,0.05)]] dark:shadow-none border-l border-neutral-100 dark:border-neutral-900 overflow-y-auto translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]"
       >
         <button
           onclick="closeDrawer()"
-          class="absolute top-6 right-6 z-10 p-2 bg-white/80 rounded-full hover:bg-neutral-100 transition-colors"
+          class="absolute top-8 right-8 z-50 group flex items-center gap-3"
         >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <span
+            class="text-[9px] tracking-[0.4em] uppercase text-neutral-400 group-hover:text-[#ed4099] transition-colors"
+            >Close</span
           >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
+          <div
+            class="w-10 h-10 border border-neutral-200 dark:border-neutral-800 rounded-full flex items-center justify-center group-hover:rotate-90 group-hover:border-[#ed4099] transition-all duration-500"
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 15 15"
+              fill="none"
+              class="text-neutral-900 dark:text-white group-hover:text-[#ed4099]"
+            >
+              <path
+                d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
         </button>
 
-        <div id="drawer-body" class="p-8 md:p-12 min-h-full"></div>
+        <div id="drawer-body" class="p-10 md:p-16"></div>
       </div>
     </div>
 
-    <section id="join" class="py-24 bg-neutral-900 text-white relative">
-      <div class="max-w-3xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-12">
+    <section
+      id="join"
+      class="py-32 bg-white dark:bg-[#050505] relative overflow-hidden transition-colors duration-500"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-200 dark:via-neutral-800 to-transparent"
+      ></div>
+
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20 reveal-on-scroll">
           <span
-            class="text-neutral-400 text-xs font-medium tracking-widest uppercase"
+            class="text-[#ed4099] text-[10px] font-bold tracking-[0.5em] uppercase"
             >Regenerasi</span
           >
-          <h2 class="font-serif text-4xl md:text-5xl mt-4">
-            Bergabung Tanpa Tekanan
+          <h2
+            class="font-light text-4xl md:text-6xl mt-6 tracking-tighter text-neutral-900 dark:text-white leading-tight"
+          >
+            Bergabung Tanpa
+            <span
+              class="italic font-serif text-neutral-400 dark:text-neutral-600"
+              >Tekanan.</span
+            >
           </h2>
-          <p class="text-neutral-400 mt-4">
-            Tidak perlu portofolio sempurna. Cukup kejujuran.
+          <p
+            class="text-neutral-500 dark:text-neutral-400 mt-6 font-light max-w-lg mx-auto leading-relaxed"
+          >
+            Kami tidak mencari teknis yang sempurna, kami mencari mata yang
+            mampu melihat kejujuran di balik lensa.
           </p>
         </div>
 
         <form
-          class="space-y-8 bg-neutral-800/50 p-8 md:p-12 rounded-lg border border-neutral-700 backdrop-blur-sm reveal-on-scroll"
+          id="whatsappForm"
+          class="space-y-12 bg-neutral-50 dark:bg-[#0a0a0a] p-8 md:p-16 border border-neutral-100 dark:border-neutral-900 reveal-on-scroll relative"
         >
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-sm text-neutral-400 font-medium"
+          <div
+            class="hidden dark:block absolute -top-24 -right-24 w-48 h-48 bg-[#ed4099]/10 blur-[100px]"
+          ></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="group space-y-2">
+              <label
+                class="text-[10px] text-neutral-400 dark:text-neutral-500 font-bold uppercase tracking-widest transition-colors group-focus-within:text-[#ed4099]"
                 >Nama / Alias</label
               >
               <input
+                id="join-name"
                 type="text"
+                required
                 placeholder="Panggil kamu apa?"
-                class="w-full bg-transparent border-b border-neutral-600 py-2 focus:outline-none focus:border-white transition-colors text-lg placeholder-neutral-600"
+                class="w-full bg-transparent border-b border-neutral-200 dark:border-neutral-800 py-3 focus:outline-none focus:border-[#ed4099] dark:focus:border-[#ed4099] transition-all text-lg text-neutral-900 dark:text-white placeholder-neutral-300 dark:placeholder-neutral-700 font-light"
               />
             </div>
-            <div class="space-y-2">
-              <label class="text-sm text-neutral-400 font-medium"
+
+            <div class="group space-y-2">
+              <label
+                class="text-[10px] text-neutral-400 dark:text-neutral-500 font-bold uppercase tracking-widest transition-colors group-focus-within:text-[#ed4099]"
                 >Medium Utama</label
               >
               <select
-                class="w-full bg-transparent border-b border-neutral-600 py-2 focus:outline-none focus:border-white transition-colors text-lg text-white"
+                id="join-medium"
+                class="w-full bg-transparent border-b border-neutral-200 dark:border-neutral-800 py-3 focus:outline-none focus:border-[#ed4099] dark:focus:border-[#ed4099] transition-all text-lg text-neutral-900 dark:text-white appearance-none cursor-pointer font-light"
               >
-                <option class="bg-neutral-800">Photography</option>
-                <option class="bg-neutral-800">Videography</option>
-                <option class="bg-neutral-800">Graphic Design</option>
-                <option class="bg-neutral-800">Documentation</option>
+                <option
+                  class="bg-white dark:bg-neutral-900 text-black dark:text-white"
+                  value="Photography"
+                >
+                  Photography
+                </option>
+                <option
+                  class="bg-white dark:bg-neutral-900 text-black dark:text-white"
+                  value="Videography"
+                >
+                  Videography
+                </option>
+                <option
+                  class="bg-white dark:bg-neutral-900 text-black dark:text-white"
+                  value="Graphic Design"
+                >
+                  Graphic Design
+                </option>
+                <option
+                  class="bg-white dark:bg-neutral-900 text-black dark:text-white"
+                  value="Documentation"
+                >
+                  Documentation
+                </option>
               </select>
             </div>
           </div>
 
-          <div class="space-y-4 pt-4">
-            <label class="text-lg text-white font-serif"
-              >Hal apa yang paling sering kamu perhatikan tapi jarang difoto
-              orang lain?</label
+          <div class="space-y-6 pt-6">
+            <label
+              class="text-xl md:text-2xl text-neutral-900 dark:text-white font-light tracking-tight leading-snug block"
             >
+              Hal apa yang paling sering kamu
+              <span class="italic text-[#ed4099]">perhatikan</span> tapi jarang
+              difoto orang lain?
+            </label>
             <textarea
-              rows="3"
-              placeholder="Ceritakan sedikit..."
-              class="w-full bg-transparent border border-neutral-600 rounded-sm p-4 focus:outline-none focus:border-white transition-colors text-neutral-200 placeholder-neutral-600 resize-none"
+              id="join-message"
+              rows="4"
+              required
+              placeholder="Ceritakan sedikit tentang perspektifmu..."
+              class="w-full bg-white dark:bg-[#050505] border border-neutral-200 dark:border-neutral-800 p-6 focus:outline-none focus:border-[#ed4099] transition-all text-neutral-800 dark:text-neutral-200 placeholder-neutral-300 dark:placeholder-neutral-700 font-light resize-none leading-relaxed shadow-sm"
             ></textarea>
           </div>
 
-          <div class="pt-4 flex justify-end">
+          <div class="pt-8 flex justify-center">
             <button
               type="button"
-              class="bg-white text-black px-8 py-3 font-medium text-sm hover:bg-neutral-200 transition-colors rounded-sm"
+              onclick="sendToWhatsApp()"
+              class="group relative overflow-hidden bg-neutral-900 dark:bg-white text-white dark:text-black px-12 py-5 text-[10px] font-bold uppercase tracking-[0.4em] transition-all hover:shadow-[0_10px_30px_rgba(237,64,153,0.3)]"
             >
-              Kirim Cerita
+              <span class="relative z-10">Kirim Cerita Ke WhatsApp</span>
+              <div
+                class="absolute inset-0 bg-[#ed4099] translate-y-full group-hover:translate-y-0 transition-transform duration-500"
+              ></div>
             </button>
           </div>
         </form>
@@ -580,24 +1018,144 @@
     </section>
 
     <footer
-      class="bg-white text-black dark:bg-[#0a0a0a] dark:text-white transition-colors duration-300 border-t border-neutral-800 py-12"
+      class="bg-white dark:bg-[#050505] text-neutral-900 dark:text-white transition-colors duration-500 border-t border-neutral-100 dark:border-neutral-900 pt-24 pb-12"
     >
-      <div
-        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
-      >
-        <div class="mb-4 md:mb-0 text-center md:text-left">
-          <h3 class="font-serif text-2xl font-bold">THD.</h3>
-          <p class="text-neutral-500 text-sm mt-1">
-            Tanjung Morawa, Indonesia.
-          </p>
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+          <div class="md:col-span-5 space-y-6">
+            <div class="inline-block group cursor-pointer">
+              <div
+                class="p-2 border border-neutral-200 dark:border-neutral-800 bg-black rounded-full group-hover:border-[#ed4099] transition-colors duration-500"
+              >
+                <img
+                  src="assets/icons/logoTHD.png"
+                  alt="THD Logo"
+                  class="w-10 h-10 object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+            </div>
+            <h2
+              class="text-2xl font-light tracking-tighter max-w-xs leading-tight"
+            >
+              Merekam realitas dari sudut pandang yang
+              <span class="italic font-serif text-[#ed4099]">berbeda.</span>
+            </h2>
+            <p
+              class="text-[10px] tracking-[0.3em] uppercase text-neutral-400 font-bold"
+            >
+              Tanjung Morawa, Indonesia.
+            </p>
+          </div>
+
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="text-[10px] tracking-[0.4em] uppercase text-[#ed4099] font-bold mb-6"
+            >
+              Directory
+            </h4>
+            <ul
+              class="space-y-3 text-sm font-light text-neutral-500 dark:text-neutral-400"
+            >
+              <li>
+                <a
+                  href="#journal"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >Journal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#people"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >People</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#join"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >Join Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-2 space-y-4">
+            <h4
+              class="text-[10px] tracking-[0.4em] uppercase text-[#ed4099] font-bold mb-6"
+            >
+              Social
+            </h4>
+            <ul
+              class="space-y-3 text-sm font-light text-neutral-500 dark:text-neutral-400"
+            >
+              <li>
+                <a
+                  href="https://www.instagram.com/tamorahunting_day/"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >Email</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-neutral-900 dark:hover:text-white transition-colors"
+                  >Twitter / X</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-3 space-y-4">
+            <h4
+              class="text-[10px] tracking-[0.4em] uppercase text-[#ed4099] font-bold mb-6"
+            >
+              Current Status
+            </h4>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+              ></div>
+              <p class="text-xs font-light text-neutral-500">
+                Open for Collaborations
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="flex space-x-6 text-sm text-neutral-400">
-          <a href="#" class="hover:text-white">Instagram</a>
-          <a href="#" class="hover:text-white">Email</a>
-          <a href="#" class="hover:text-white">Community Guidelines</a>
-        </div>
-        <div class="mt-4 md:mt-0 text-neutral-600 text-xs">
-          &copy; 2026 Tamora Hunting Day.
+
+        <div
+          class="pt-8 border-t border-neutral-100 dark:border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div
+            class="flex gap-8 text-[9px] tracking-[0.3em] uppercase font-medium text-neutral-400"
+          >
+            <a href="#" class="hover:text-[#ed4099] transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-[#ed4099] transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-[#ed4099] transition-colors"
+              >Community Guidelines</a
+            >
+          </div>
+
+          <div class="text-[10px] tracking-[0.2em] text-neutral-400 font-light">
+            &copy; 2026
+            <span class="font-bold text-neutral-900 dark:text-white"
+              >Tamora Hunting Day.</span
+            >
+            <span class="ml-2 opacity-50 italic font-serif text-[12px]"
+              >Visual Collective.</span
+            >
+          </div>
         </div>
       </div>
     </footer>

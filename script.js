@@ -39,6 +39,7 @@ themeToggleBtn.addEventListener("click", function () {
 });
 
 // 1. DATA MEMBER (DATABASE SIMULATION)
+// 1. DATA (Tetap sama, saya hanya merapikan penulisan)
 const membersData = [
   {
     id: 1,
@@ -51,7 +52,6 @@ const membersData = [
     portfolio: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=500&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1542259682-16b7da5456f5?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517541604467-3a1372863863?q=80&w=500&auto=format&fit=crop",
     ],
   },
   {
@@ -61,10 +61,9 @@ const membersData = [
     quote: "Gerakan lambat membuat segalanya lebih jujur.",
     photo:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop",
-    bio: "Eksperimentalis video yang menggunakan kamera analog dan digital. Fokus pada dokumenter mini tentang pedagang kaki lima.",
+    bio: "Eksperimentalis video yang menggunakan kamera analog dan digital.",
     portfolio: [
       "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e63?q=80&w=500&auto=format&fit=crop",
     ],
   },
   {
@@ -74,11 +73,9 @@ const membersData = [
     quote: "Chaos is just structure waiting to be found.",
     photo:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=500&auto=format&fit=crop",
-    bio: "Membawa elemen jalanan ke dalam desain poster digital. Sering berkolaborasi dengan musisi lokal untuk cover album.",
+    bio: "Membawa elemen jalanan ke dalam desain poster digital.",
     portfolio: [
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=500&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1558655146-d09347e0b7a9?q=80&w=500&auto=format&fit=crop",
     ],
   },
 ];
@@ -89,40 +86,63 @@ const peopleGrid = document.getElementById("people-grid");
 // Render Member Cards
 membersData.forEach((member, index) => {
   const card = document.createElement("div");
-  // Tambahkan class 'group' di sini sebagai pemicu hover
-  card.className = "reveal-on-scroll group cursor-pointer relative";
+  // Update class ke desain Sophisticated Dark & Light
+  card.className =
+    "reveal-on-scroll group cursor-pointer relative flex flex-col items-center text-center";
   card.style.transitionDelay = `${index * 100}ms`;
   card.onclick = () => openDrawer(member.id);
 
   card.innerHTML = `
-    <div class="mb-4 overflow-hidden rounded-sm relative aspect-[3/4] bg-neutral-100">
+    <div class="mb-8 overflow-hidden relative aspect-[3/4] bg-neutral-100 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 w-full group">
         <img src="${member.photo}" 
-             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out" 
+             class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-in-out opacity-90 group-hover:opacity-100" 
              alt="${member.name}">
         
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500 z-10 flex items-center justify-center">
-            <span class="opacity-0 group-hover:opacity-100 bg-white text-black px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
-                Lihat Karya
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex flex-col justify-end p-6">
+            <span class="text-white text-[9px] font-bold uppercase tracking-[0.4em] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                View Archive
             </span>
+            <div class="w-8 h-[1px] bg-[#ed4099] mt-2 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
         </div>
     </div>
-    <h4 class="font-serif text-lg font-medium">${member.name}</h4>
-    <p class="text-xs text-neutral-500 uppercase tracking-widest mb-2">${member.role}</p>
-    <p class="text-sm text-neutral-600 italic line-clamp-2">"${member.quote}"</p>
-    `;
+
+    <div class="space-y-2">
+      <h4 class="text-xl font-light tracking-tight text-neutral-900 dark:text-white group-hover:text-[#ed4099] transition-colors duration-300">
+        ${member.name}
+      </h4>
+      <p class="text-[9px] text-neutral-400 dark:text-neutral-500 font-bold uppercase tracking-[0.3em]">
+        ${member.role}
+      </p>
+      <div class="pt-4 px-4">
+        <p class="text-xs text-neutral-500 dark:text-neutral-400 italic leading-relaxed line-clamp-2 font-light">
+          "${member.quote}"
+        </p>
+      </div>
+    </div>
+  `;
   peopleGrid.appendChild(card);
 });
 
-// Render Join Card (Last Item)
+// 3. RENDER JOIN CARD (Sophisticated Placeholder)
 const joinCard = document.createElement("div");
 joinCard.className =
-  "reveal-on-scroll border border-dashed border-neutral-300 flex flex-col items-center justify-center p-8 text-center bg-neutral-50 hover:bg-neutral-100 transition-colors cursor-pointer";
-joinCard.onclick = () => document.getElementById("join").scrollIntoView();
+  "reveal-on-scroll group border border-dashed border-neutral-300 dark:border-neutral-800 flex flex-col items-center justify-center p-10 text-center bg-neutral-50/50 dark:bg-neutral-900/20 hover:bg-white dark:hover:bg-[#0a0a0a] hover:border-[#ed4099] transition-all duration-500 cursor-pointer aspect-[3/4]";
+joinCard.onclick = () =>
+  document.getElementById("join").scrollIntoView({ behavior: "smooth" });
+
 joinCard.innerHTML = `
-        <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mb-4"><span class="text-2xl">+</span></div>
-        <h4 class="font-serif text-lg font-medium">Kamu?</h4>
-        <p class="text-sm text-neutral-500 mt-2">Ruang ini masih kosong.</p>
-  `;
+    <div class="relative">
+      <div class="w-14 h-14 border border-neutral-300 dark:border-neutral-700 rounded-full flex items-center justify-center mb-6 group-hover:border-[#ed4099] group-hover:bg-[#ed4099] transition-all duration-500">
+        <svg class="w-5 h-5 text-neutral-400 dark:text-neutral-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"/>
+        </svg>
+      </div>
+    </div>
+    <h4 class="text-lg font-light tracking-tighter text-neutral-900 dark:text-white uppercase tracking-[0.1em]">Become Part of Us</h4>
+    <p class="text-[10px] text-neutral-500 dark:text-neutral-500 mt-4 tracking-widest uppercase font-medium">Space Available</p>
+    
+    <div class="mt-6 w-0 h-px bg-[#ed4099] group-hover:w-12 transition-all duration-500"></div>
+`;
 peopleGrid.appendChild(joinCard);
 
 // 3. DRAWER LOGIC
@@ -131,58 +151,95 @@ function openDrawer(id) {
   if (!member) return;
 
   const drawerBody = document.getElementById("drawer-body");
+  const drawer = document.getElementById("member-drawer");
+  const content = document.getElementById("drawer-content");
+  const overlay = document.getElementById("drawer-overlay");
 
-  // Build Portfolio HTML string
+  // Portfolio with Modern Grayscale to Color
   const portfolioHTML = member.portfolio
     .map(
       (img) => `
-        <div class="bg-neutral-100 aspect-square overflow-hidden rounded-sm group">
-            <img src="${img}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="relative bg-neutral-100 dark:bg-neutral-900 aspect-[4/5] overflow-hidden group border border-neutral-100 dark:border-neutral-800">
+            <img src="${img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+            <div class="absolute inset-0 border-[10px] border-white dark:border-[#0a0a0a] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
     `,
     )
     .join("");
 
-  // Inject Content
   drawerBody.innerHTML = `
-        <div class="flex flex-col h-full">
-            <div class="flex items-start gap-6 mb-8">
-                <img src="${member.photo}" class="w-24 h-24 object-cover rounded-full border border-neutral-200">
-                <div>
-                    <h2 class="font-serif text-3xl mb-1">${member.name}</h2>
-                    <p class="text-xs text-neutral-500 font-bold uppercase tracking-widest mb-3">${member.role}</p>
-                    <p class="text-sm text-neutral-600 italic">"${member.quote}"</p>
-                </div>
+    <div class="flex flex-col h-full animate-fadeIn">
+        <div class="space-y-8 mb-16">
+            <div class="inline-block p-[2px] rounded-full bg-gradient-to-tr from-[#ed4099] to-blue-500">
+              <img src="${member.photo}" class="w-32 h-32 object-cover rounded-full border-4 border-white dark:border-[#0a0a0a]">
             </div>
             
-            <div class="border-t border-neutral-200 py-6 mb-6">
-                <h5 class="text-xs font-bold uppercase tracking-widest mb-3 text-neutral-400">Tentang</h5>
-                <p class="text-neutral-700 leading-relaxed font-light">${member.bio}</p>
+            <div>
+                <span class="text-[10px] tracking-[0.5em] text-[#ed4099] font-bold uppercase mb-2 block">Collector of Realities</span>
+                <h2 class="text-5xl font-light tracking-tighter dark:text-white mb-4 leading-none">${member.name}</h2>
+                <div class="flex items-center gap-4 text-xs tracking-widest text-neutral-400 uppercase">
+                  <span>${member.role}</span>
+                  <span class="w-8 h-px bg-neutral-200 dark:bg-neutral-800"></span>
+                  <span>Joined 2024</span>
+                </div>
             </div>
 
-            <div class="flex-grow">
-                <h5 class="text-xs font-bold uppercase tracking-widest mb-4 text-neutral-400">Selected Works</h5>
-                <div class="grid grid-cols-2 gap-4">
-                    ${portfolioHTML}
-                </div>
+            <p class="text-xl font-serif italic text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-lg">
+              "${member.quote}"
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 border-y border-neutral-100 dark:border-neutral-900 mb-12">
+            <div class="md:col-span-1">
+              <h5 class="text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-900 dark:text-white">Biography</h5>
             </div>
-            
-            <div class="mt-8 pt-6 border-t border-neutral-200 text-center">
-                <a href="#" class="text-sm font-medium hover:underline">Lihat Profil Lengkap &rarr;</a>
+            <div class="md:col-span-2">
+              <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-[1.8] font-light italic">
+                ${member.bio}
+              </p>
             </div>
         </div>
-    `;
 
-  // Open Drawer (Add Classes)
-  document.body.classList.remove("drawer-closed");
-  document.body.classList.add("drawer-open");
-  document.body.style.overflow = "hidden"; // Disable background scroll
+        <div class="space-y-6">
+            <div class="flex justify-between items-end mb-8">
+              <h5 class="text-[10px] font-bold uppercase tracking-[0.3em] text-neutral-900 dark:text-white">Selected Works</h5>
+              <span class="text-[9px] text-neutral-400 tracking-widest uppercase">${member.portfolio.length} Items</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                ${portfolioHTML}
+            </div>
+        </div>
+        
+        <div class="mt-20 text-center">
+            <a href="#" class="inline-block w-full py-5 border border-neutral-200 dark:border-neutral-800 text-[10px] font-bold tracking-[0.4em] uppercase hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all duration-500">
+              Request Full Portfolio
+            </a>
+        </div>
+    </div>
+  `;
+
+  // Animation Trigger
+  drawer.classList.remove("invisible");
+  setTimeout(() => {
+    content.classList.remove("translate-x-full");
+    overlay.classList.add("opacity-100");
+  }, 10);
+
+  document.body.style.overflow = "hidden";
 }
 
 function closeDrawer() {
-  document.body.classList.remove("drawer-open");
-  document.body.classList.add("drawer-closed");
-  document.body.style.overflow = ""; // Enable background scroll
+  const content = document.getElementById("drawer-content");
+  const overlay = document.getElementById("drawer-overlay");
+  const drawer = document.getElementById("member-drawer");
+
+  content.classList.add("translate-x-full");
+  overlay.classList.remove("opacity-100");
+
+  setTimeout(() => {
+    drawer.classList.add("invisible");
+    document.body.style.overflow = "";
+  }, 700);
 }
 
 // 4. ANIMATION & INTERACTION LOGIC (Sudah Digabung & Dioptimalkan)
@@ -272,7 +329,7 @@ function initStarBorder(elementId, options = {}) {
 
 // Cara Penggunaan:
 initStarBorder("myStarButton", {
-  color: "#008BFF",
+  color: "#ed4099",
   speed: "3s",
   thickness: 2,
 });
@@ -336,4 +393,26 @@ function spawnAbsorbParticles(cx, cy) {
     gooeyFilter.appendChild(p);
     setTimeout(() => p.remove(), 700);
   }
+}
+
+function sendToWhatsApp() {
+  const name = document.getElementById("join-name").value;
+  const medium = document.getElementById("join-medium").value;
+  const message = document.getElementById("join-message").value;
+
+  // Validasi sederhana
+  if (!name || !message) {
+    alert("Harap isi Nama dan Cerita kamu sebelum mengirim.");
+    return;
+  }
+
+  const phoneNumber = "6282311649195"; // Format internasional (tanpa + atau 0 di depan)
+
+  // Encode pesan untuk URL
+  const text = `Halo THD!%0A%0ASaya ingin bergabung dengan kolektif.%0A%0A*Nama:* ${name}%0A*Medium:* ${medium}%0A*Perspektif:* ${message}`;
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+
+  // Buka jendela baru ke WhatsApp
+  window.open(whatsappURL, "_blank");
 }

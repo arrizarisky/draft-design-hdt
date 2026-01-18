@@ -1,3 +1,106 @@
+/* Animasi Putar Custom (Star Border) */
+@keyframes move-grid {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+.bg-grid-animate {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  animation: move-grid 2s linear infinite;
+}
+
+.text-gradient-white {
+  background: linear-gradient(to bottom, #ffffff 0%, #a1a1a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes rotate-glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-star-rotate {
+  animation: rotate-glow 4s linear infinite;
+}
+/* Tambahkan ini di bagian CSS */
+.profile-pic {
+  width: 70px; /* Ukuran foto */
+  height: 70px;
+  border-radius: 50%; /* Membuat foto jadi lingkaran */
+  background-color: #333; /* Fallback jika gambar tidak ada */
+  background-size: cover; /* Menyesuaikan gambar agar pas */
+  background-position: center; /* Posisi gambar di tengah */
+  margin-bottom: 15px; /* Jarak antara foto dan teks */
+  border: 2px solid #555; /* Border tipis untuk foto */
+}
+
+.inner-content {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  padding: 15px 30px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Foto, role, dan nama berada di tengah */
+  text-align: center; /* Teks juga di tengah */
+}
+
+/* Penyesuaian untuk Role dan Name */
+.role {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 4px; /* Sedikit spasi antar role dan name */
+  margin-top: 0; /* Pastikan tidak ada margin atas berlebih */
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0; /* Pastikan tidak ada margin atas berlebih */
+}
+
+/* ... (CSS connectors dan sub-nodes tetap sama) ... */
+
+/* Animasinya tetap sama */
+@keyframes rotate-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Efek Glow Tambahan saat Hover */
+.star-border-box:hover {
+  filter: drop-shadow(0 0 5px var(--color-1));
+  transition: 0.3s;
+}
+
+.star-border-box:hover .glow-element {
+  --speed: 1.5s; /* Putaran lebih cepat saat hover */
+}
 /* Minimalist Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -11,6 +114,23 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #d4d4d4;
+}
+
+.filter-active {
+  color: #ed4099 !important;
+  position: relative;
+}
+.filter-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #ed4099;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ed4099;
 }
 
 /* Utility specific for the classic feel */
@@ -109,7 +229,7 @@
 .star-inner {
   position: relative;
   z-index: 1;
-  background: linear-gradient(to bottom, #000, #111827);
+  background: linear-gradient(to bottom, #000, #240a18);
   color: white;
   text-align: center;
 
